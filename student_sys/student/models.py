@@ -27,3 +27,7 @@ class Student(models.Model):
 
     class Meta:
         verbose_name = verbose_name_plural = '学员状态'
+
+    @classmethod
+    def get_all(cls):
+        return cls.objects.all()  # 把数据封装到Model层 暴露更语义化的接口
